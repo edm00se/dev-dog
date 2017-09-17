@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+# dist/ # keeping, since I'm driving my gh-pages off of it
+npm-debug.log
+yarn-error.log
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
