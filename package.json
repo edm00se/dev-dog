@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Eric McCormick",
   "homepage": "https://edm00se.codes/dev-dog/",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dashboard -- webpack-dev-server --open --hot",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --progress --hide-modules",
