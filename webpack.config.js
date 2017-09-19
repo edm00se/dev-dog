@@ -1,13 +1,17 @@
-const path = require('path')
-const webpack = require('webpack')
-const DashboardPlugin = require('webpack-dashboard/plugin')
+const path = require('path');
+const webpack = require('webpack');
+const DashboardPlugin = require('webpack-dashboard/plugin');
+const { BaseHrefWebpackPlugin } = require('base-href-webpack-plugin');
+
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
+    publicPath: isProd ? './dist/' : '',
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -56,13 +60,13 @@ module.exports = {
 
 
 
-if (process.env.NODE_ENV === 'development') {
+if (isDev) {
   module.exports.plugins = (module.exports.plugins || []).concat([
     new DashboardPlugin()
   ])
 }
 
-if (process.env.NODE_ENV === 'production') {
+if (isProd) {
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
@@ -79,6 +83,7 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    })
+    }),
+    new BaseHrefWebpackPlugin({ baseHref: '/dev-dog/' })
   ])
 }

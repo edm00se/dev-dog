@@ -3,6 +3,7 @@
   "description": "backing facts for the developer-dog-alexa-skill",
   "version": "1.0.0",
   "author": "Eric McCormick",
+  "homepage": "https://edm00se.codes/dev-dog/",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dashboard -- webpack-dev-server --open --hot",
@@ -17,6 +18,7 @@
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
     "babel-preset-env": "1.6.0",
+    "base-href-webpack-plugin": "1.0.2",
     "cross-env": "5.0.5",
     "css-loader": "0.28.7",
     "file-loader": "0.11.2",

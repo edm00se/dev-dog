@@ -1,6 +1,6 @@
 <template>
   <div class="welcome-block">
-    <img src="./assets/DevDog-AlexaSkill.jpg">
+    <img src="./assets/DevDog-AlexaSkill.png">
     <div class="welcome-block main">
       <h1>Developer Dog Alexa Skill</h1>
       <h2>...just the 🐶 facts</h2>
