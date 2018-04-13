@@ -88,11 +88,6 @@ export default {
     touch-action: manipulation;
     border: .0625rem solid transparent;
     vertical-align: middle;
-    :hover {
-      cursor: pointer;
-    }
-  }
-  audio {
-    
+    cursor: pointer;
   }
 </style>
