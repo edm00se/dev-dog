@@ -43,7 +43,7 @@ export default {
       const a = document.querySelector('.barky');
       a.currentTime = 0;
       a.play();
-      vm.$dialog.open('Something?',{
+      vm.$dialog.open('Doggy Developer Facts!',{
         html: true,
         okText: 'OK',
         cancelText: 'Cancel',
